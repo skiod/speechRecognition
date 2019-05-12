@@ -1,0 +1,18 @@
+{
+  "manifest_version":2,
+  "name": "My Extension",
+  "version": "1.0.0",
+  "browser_action": {
+      "default_icon"  : "logo.png",
+      "default_popup" : "popup.html",
+      "default_title" : "My first Chrome Extension"
+  },
+  "author": "khalid skiod",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js"     : ["artyom.window.min.js","popup.js"]
+    }
+  ]
+}
